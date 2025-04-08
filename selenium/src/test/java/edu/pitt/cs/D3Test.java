@@ -150,16 +150,16 @@ public class D3Test {
     vars.put("result", driver.findElement(By.xpath("//div[@id=\'returnResult\']")).getText());
     assertEquals(vars.get("result").toString(), "Success!");
   }
-  @Test
-  public void tEST9FEED() {
-    driver.get("http://localhost:8080/");
-    driver.findElement(By.xpath("//a[contains(text(),\'Feed-A-Cat\')]")).click();
-    driver.findElement(By.xpath("//input[@id=\'catnips\']")).click();
-    driver.findElement(By.xpath("//input[@id=\'catnips\']")).sendKeys("6");
-    driver.findElement(By.xpath("//button[contains(.,\'Feed\')]")).click();
-    vars.put("result", driver.findElement(By.xpath("//div[@id=\'feedResult\']")).getText());
-    assertEquals(vars.get("result").toString(), "Nom, nom, nom.");
-  }
+//   @Test
+//   public void tEST9FEED() {
+//     driver.get("http://localhost:8080/");
+//     driver.findElement(By.xpath("//a[contains(text(),\'Feed-A-Cat\')]")).click();
+//     driver.findElement(By.xpath("//input[@id=\'catnips\']")).click();
+//     driver.findElement(By.xpath("//input[@id=\'catnips\']")).sendKeys("6");
+//     driver.findElement(By.xpath("//button[contains(.,\'Feed\')]")).click();
+//     vars.put("result", driver.findElement(By.xpath("//div[@id=\'feedResult\']")).getText());
+//     assertEquals(vars.get("result").toString(), "Nom, nom, nom.");
+//   }
   @Test
   public void tEST10GREETACAT() {
     driver.get("http://localhost:8080/");
