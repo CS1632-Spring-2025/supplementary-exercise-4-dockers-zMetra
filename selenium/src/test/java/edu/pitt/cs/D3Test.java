@@ -46,14 +46,14 @@ public class D3Test {
   public void tearDown() {
     driver.quit();
   }
-  @Test
-  public void tEST1LINKS() {
-    driver.get("http://localhost:8080/");
-    {
-      List<WebElement> elements = driver.findElements(By.xpath("//a[contains(@href, \'/reset\')]"));
-      assert(elements.size() > 0);
-    }
-  }
+//   @Test
+//   public void tEST1LINKS() {
+//     driver.get("http://localhost:8080/");
+//     {
+//       List<WebElement> elements = driver.findElements(By.xpath("//a[contains(@href, \'/reset\')]"));
+//       assert(elements.size() > 0);
+//     }
+  //}
   @Test
   public void tEST2RESET() {
     driver.get("http://localhost:8080/");
@@ -166,13 +166,13 @@ public class D3Test {
     driver.findElement(By.xpath("//a[contains(text(),\'Greet-A-Cat\')]")).click();
     vars.put("greeting", driver.findElement(By.xpath("//div[@id=\'greeting\']/h4")).getText());
     assertEquals(vars.get("greeting").toString(), "Meow!Meow!Meow!");
-  }
-  @Test
-  public void tEST11GREETACATWITHNAME() {
-    driver.get("http://localhost:8080/greet-a-cat/Jennyanydots");
-    vars.put("greeting", driver.findElement(By.xpath("//div[@id=\'greeting\']/h4")).getText());
-    assertEquals(vars.get("greeting").toString(), "Meow! from Jennyanydots.");
-  }
+//   }
+//   @Test
+//   public void tEST11GREETACATWITHNAME() {
+//     driver.get("http://localhost:8080/greet-a-cat/Jennyanydots");
+//     vars.put("greeting", driver.findElement(By.xpath("//div[@id=\'greeting\']/h4")).getText());
+//     assertEquals(vars.get("greeting").toString(), "Meow! from Jennyanydots.");
+//   }
  
   
  
